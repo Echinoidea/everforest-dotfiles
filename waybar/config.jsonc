@@ -1,0 +1,66 @@
+{
+    "reload_style_on_change": true,
+    "layer": "top",
+    "modules-left": [],
+    "modules-center": ["hyprland/workspaces", "hyprland/mode"],
+    "modules-right": ["network", "pulseaudio", "cpu", "memory", "temperature", "battery", "clock", "custom/logout"],
+    "hyprland/window": {
+        "max-length": 50
+    },
+
+    "network": {
+      "interface": "wlan0",
+      "interval": 10,
+      "format-wifi": "{essid} : {signalStrength}%"
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+          "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+          "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+          "headphones": "",
+          "default": ["", ""]
+        },
+        "scroll-step": 5,
+        "on-click": "pavucontrol"
+    },
+    "cpu": {
+      "interval": 10,
+      "format": "{usage}% "
+    },
+
+    "memory": {
+      "interval": 10,
+      "format": "{}% "
+    },
+
+    "temperature": {
+      "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input",
+      "interval": 10,
+      "format": "{temperatureC}C°"
+    },
+
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:L%a, %d. %b  %H:%M}"
+    },
+    "custom/logout": {
+      "format": "󰐥",
+      "on-click": "wlogout"
+    }
+
+
+    //"network": {
+    //  "interface": "wlan0",
+    //  "format-wifi": "{essid} ({signalstrength}%)",
+    //  "format-disconnected": "Disconnected!"
+    //},
+
+}
